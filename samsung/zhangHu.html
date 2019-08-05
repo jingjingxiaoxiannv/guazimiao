@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>三星账户</title>
+    <link rel="stylesheet" href="css/zhanghu.css">
+
+</head> 
+
+<body>
+    <div class="boxUp">
+        <div class="upContent">
+            <div class="conLeft">
+                <p>三星账户</p>
+                <h1>创建三星账户</h1>
+                <a href="#">探索更多三星服务></a>
+            </div>
+            <div class="conRight">
+                <form>
+                    <p>点击以下链接并仔细阅读条款。继续使用即表示您确认已阅读并同意以下条款。</p>
+                    <ul>
+                        <li><input class="xuan" type="checkbox"><a href="#">条款和条件</a><span>以及</span><a
+                                href="#">特殊条款。</a></li>
+                        <li><input class="xuan" type="checkbox"><a href="#">三星隐私权政策</a></li>
+                        <li><input class="xuan" type="checkbox"><a href="#">个人敏感信息收集使用说明(核心功能）</a></li>
+                        <li><input class="xuan" type="checkbox"><a href="#">其他特殊情形</a></li>
+
+                        <hr>
+                        <li><input class="xuan0" type="checkbox"><a href="#">其他特殊情形</a></li>
+                    </ul>
+                    <div id="btn01" class="btn01">同意</div>
+                    <div id="btn02" class="btn02">拒绝</div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footerBox">
+            <div class="left">
+                <a href="#">条款和条件</a>
+                <a href="#">三星隐私权政策</a>
+                <a href="#">联系我们</a>
+            </div>
+            <div class="right">
+                © Samsung Electronics Co., Ltd.
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script>
+        //
+        var $xuan = $(".xuan");
+        var cou = true;
+        $(".xuan0").click(function () {
+            if (cou) {
+                $xuan.slice(0, 4).attr("checked", true);
+                $("#btn01").css({
+                    "backgroundColor": "#1428a0",
+                    "cursor": "pointer"
+                })
+                $("#btn01").click(function () {
+                    window.location.href = "zhuce.html";
+                })
+                cou = false;
+            } else {
+                $xuan.slice(0, 4).attr("checked", false);
+                $("#btn01").css("backgroundColor", "#9ca4d4")
+                cou = true;
+            }
+        })
+        $xuan.click(function () {
+            var len = $("input[class=xuan]:checked").length;
+            var len2 = $("input[class=xuan]").length;
+            if (len == len2) {
+                $(".xuan0").attr("checked", true);
+                $("#btn01").css({
+                    "backgroundColor": "#1428a0",
+                    "cursor": "pointer"
+                })
+                cou = false;
+            } else {
+                $(".xuan0").attr("checked", false);
+                $("#btn01").css({
+                    "backgroundColor": "#9ca4d4",
+                })
+                cou = true;
+            }
+        })
+        var $btn = $("#btn02")
+        $btn.css("cursor", "pointer");
+        $btn.click(function () {
+            window.location.href = "index.html"
+        })
+    </script>
+</body>
+
+
+</html>
