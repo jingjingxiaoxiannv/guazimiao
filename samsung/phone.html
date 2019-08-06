@@ -6,9 +6,9 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
 			integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/swiper.min.css">
-		
+		<script src="js/phone.js" type="text/javascript" charset="utf-8"></script>
 		<link rel="stylesheet" type="text/css" href="css/phone.css"/>
-		<script src="js/jquery-1.8.3.min.js"></script>
+		
 		<script src="js/phone.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
@@ -244,8 +244,114 @@
 		 
 		 <div class="xiJie">
 		 	<div class="xiJieBox">
-		 		<p> <a href="#">网上商城</a>><a href="#"> 活动商品分类</a>><a href="#">智能插座</a></p>
+		 		<p class="xiJieBoxP"> <a href="#">网上商城</a>><a href="#"> 活动商品分类</a>><a href="#">智能插座</a></p>
+				<div class="picName">
+					<div class="fangDaPic">
+						<div id="picUp" class="picUp">
+						</div>
+						<script src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+						<script type="text/javascript">
+							var srcarr = ["img/chazuo/1557317368830241_570X570.jpg","img/chazuo/1557317368830241_570X570.jpg","img/chazuo/15573174409942342_570X570.jpg","img/chazuo/15573174510183604_570X570.jpg","img/chazuo/15573174575041129_570X570.jpg"]
+							
+							$("#RightBtn").click(function(){
+								$("#sPicBox").animate({left: '-70px'},500);
+								
+								$("#leftBtn").click(function(){
+										$("#sPicBox").animate({left: '45px'},500);
+										$("#RightBtn").bind()
+									});
+							});
+							
+							
+							$(".sPic").click(function(event){
+								event.stopPropagation();
+								$(this).css("border","2px solid blue").siblings().css("border","none");	
+							})
+							
+							var imgDom = document.getElementsByClassName("sPic");
+							var datu = document.getElementById("pic");
+							for (let i in imgDom){
+								imgDom[i].onclick = function(){
+									datu.src = srcarr[i];
+									console.log(datu)
+								}
+							}
+							var picUps = document.getElementById("picUp")
+							
+							new Magnifier({
+								imgs:["img/chazuo/1557317368830241_570X570.jpg"],
+								width:150,
+								height:150,
+								color:"#ffffff",
+								showPosition:"right"
+							},picUps)
+							
+						</script>
+						
+						<div class="picDown">
+							<div id="leftBtn" class="goL lrBox">
+								<
+							</div>
+							<div id="RightBtn" class="goR lrBox">
+								>
+							</div>
+							<div id="sPicBox" class="sPicBox">
+								<img class="sPic" src="img/chazuo/15573173852503913_100X100.jpg" >
+								<img class="sPic" src="img/chazuo/15573173852503913_100X100.jpg" >
+								<img class="sPic" src="img/chazuo/15573174409942342_100X100.jpg" >
+								<img class="sPic" src="img/chazuo/15573174510183604_100X100.jpg" >
+								<img class="sPic" src="img/chazuo/15573174575041129_100X100.jpg" >
+							</div>
+						</div>
+						
+						
+					</div>
+					<div class="name">
+						<p class="nameP">智能插座</p>
+						<div class="maidian">
+							<p><span class="maiDianSpan">卖点</span> 定时充电 简单便捷、远程控制 安全节能</p>
+							<p><span class="maiDianSpan">售后热线</span> 400-060-6050</p>
+						</div>
+						<p class="cols">颜色&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<span class="colB">
+								白色
+								<span class="yuan"></span>
+							</span>
+						</p>
+						<p class="cols">套餐&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<span class="colB">
+								入门级套装<span class="redzi">省￥10</span>
+							</span>
+						</p>
+						<div class="jiaGe">
+							价格
+							<div class="jiageRight">
+								<p class="UpP">白色<span>￥52.00</span></p>
+								<p class="downP"><span class="jifen">可获积分</span> ● <a href="#">基本积分 </a>52</p>
+							</div>
+						</div>
+						<div class="innercar">
+							加入购物车
+						</div>
+					</div>
+				</div>
 		 	</div>
+		 </div>
+		 <!-- 介绍 -->
+		 <div class="jieshaoNav">
+		 	<div class="jieshaoNavBox">
+		 		<h2>智能插座</h2>
+				<a href="#1">商品动态</a>
+				<a href="#">规格参数</a>
+		 	</div>
+		 </div>
+		 <!-- 大图 -->
+		 <div class="jieshaoPic">
+			 <div id="1" class="jieshaoPicBox">
+			 	<img src="img/chazuo/img-1-b.jpg" >
+			 	<img src="img/chazuo/img-2-b.jpg" >
+			 	<img src="img/chazuo/img-3-b.jpg" >
+			 </div>
 		 </div>
 		 
 		 
