@@ -21,9 +21,12 @@ figure {
     margin: 0;
     padding: 0;
 }
-
+html{
+	transition: all .5s
+}
 body {
     font-family: Microsoft YaHei;
+	
 }
 
 a { 
@@ -481,9 +484,50 @@ img {
 			transform: scaleX(1.1)
 		}
 	}
-	
 }
-
+.guige {
+	width: 100%;
+	.guigeBox{
+		width: 1349px;
+		height: 180px;
+		margin: 0 auto;
+		text-align: center;
+		font-size: 32px;
+		line-height: 180px;
+	}
+	.canshuBox{
+		width: 1349px;
+		height: 133px;
+		padding:  30px 27px;
+		border-top: 1px solid #d0d0d0;
+		border-bottom: 1px solid #d0d0d0;
+		.wuli{
+			width: 70px;
+			color: #0071bf;
+			font-size: 16px;
+			font-weight: 600;
+			float: left;
+		}
+		.chicun{
+			width: 283px;
+			height: 73px;
+			float: left;
+			margin-left: 253px;
+			h3{
+				font-size: 14px;
+				font-weight: 900;
+			}
+		}
+		.zhongliang{
+			float: left;
+			margin-left: 40px;
+			h3{
+				font-size: 14px;
+				font-weight: 900;
+			}
+		}
+	}
+}
 
 
 
