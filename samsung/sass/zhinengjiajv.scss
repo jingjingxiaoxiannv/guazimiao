@@ -328,11 +328,10 @@ img {
 	}
 	.boxRight{
 		width: 950px;
-		height: 2270px;
 		float: right;
 		.rightTit{
 			height: 48px;
-			background: cyan;
+			overflow: hidden;
 			h3{
 				font-size: 20px;
 				width: 130px;
@@ -343,10 +342,61 @@ img {
 					color: #666666;
 				}
 			}
+			.rightpaixv{
+				float: right;
+				line-height: 48px;
+				display: flex;
+				align-items: center;
+				.threeBox{
+					width: 225px;
+					height: 40px;
+					border: 1px solid #e0e0e0;
+					border-radius: 10px;
+					display: flex;
+					
+					p{
+						height: 39px;
+						width: 69px;
+						text-align: center;
+						position: relative;
+						line-height: 40px;
+						border-right: 1px solid #e0e0e0;
+					}
+					.lastP{
+						border-right:none;
+						
+						span{
+							display: inline-block;
+							width: 0;
+							height: 0;
+							border: 4px solid transparent;
+							position: relative;
+						}
+						.spOne{
+							border-bottom-color:  black;
+							top: -5px;
+						}
+						.sptwo{
+							border-top-color:  black;
+							top:5px;
+							left: -8px;
+						}
+					}
+				}
+			}
 		}
 	}
 }
-
+.chanpinBox{
+	width: 100%;
+	padding: 40px 0;
+	background: red;
+	.chanpin{
+		width: 293px;
+		height: 410px;
+		background: white;
+	}
+}
 
 
 
